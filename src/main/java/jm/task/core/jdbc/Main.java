@@ -13,9 +13,12 @@ import jm.task.core.jdbc.util.Util;
  *  Удаление таблицы
  */
 public class Main {
-    private final static UserService userService = new UserServiceImpl();
+
 
     public static void main(String[] args) {
+
+        UserService userService = new UserServiceImpl();
+
         userService.createUsersTable();
 
         userService.saveUser("Миша", "Михайлов", (byte) 12);
